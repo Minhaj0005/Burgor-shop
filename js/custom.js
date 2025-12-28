@@ -36,11 +36,16 @@ $(document).ready(function() {
 
 /** google_map js **/
 function myMap() {
+    var myCenter = new google.maps.LatLng(8.503417, 81.172917);
     var mapProp = {
-        center: new google.maps.LatLng(40.712775, -74.005973),
+        center: myCenter,
         zoom: 18,
     };
     var map = new google.maps.Map(document.getElementById("googleMap"), mapProp);
+    var marker = new google.maps.Marker({
+        position: myCenter,
+        map: map
+    });
 }
 
 // client section owl carousel
